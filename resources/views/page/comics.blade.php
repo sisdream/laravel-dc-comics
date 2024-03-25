@@ -10,6 +10,7 @@
                     <img src="{{$comic['thumb']}}" alt="fumetto">
                 </div>
                 <h3 class="mt-2 text-uppercase">{{$comic['title']}}</h3>
+                <a href="{{ route('comic-detail', $comic['id'])}}">Dettaglio</a>
             </div>
         @endforeach
     </div>
@@ -60,6 +61,5 @@
             </div>
         </li>
     </ul>
-    {{ $comics->links('pagination::bootstrap-5') }}
 </div>
 @endsection
