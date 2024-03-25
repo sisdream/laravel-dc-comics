@@ -60,5 +60,6 @@
             </div>
         </li>
     </ul>
+    {{ $comics->links('pagination::bootstrap-5') }}
 </div>
 @endsection
