@@ -16,6 +16,9 @@
     </div>
     <div class="d-flex justify-content-center my-3">
         <button class="btn btn-primary rounded-0 custom-btn">LOAD MORE</button>
+        <div class="icon mx-3">
+        <a href="{{ route('comic-create')}}"><i class="fa-solid fa-pen text-light"></i></a>
+        </div>
     </div>
 </main>
 <div class="quick-links">
