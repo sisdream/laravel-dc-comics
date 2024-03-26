@@ -16,11 +16,21 @@ use App\Http\Controllers\PageController;
 |
 */
 
+Route::get("", function () {
+    return view('home');
+})->name('home');
+  
+Route::resource("comics", ComicController::class);
+
 Route::get('/', [ComicController::class,'index'])->name('home');
-
 Route::get('comic-create', [ComicController::class, 'create'])->name('comic-create');
-
 Route::get('comic-detail/{id}', [ComicController::class,'show'])->name('comic-detail');
+Route::get('comic-detail', [ComicController::class,'store'])->name('comic-detail');
+Route::get('comic-update', [ComicController::class,'update'])->name('comic-update');
+Route::get('comic-edit/edit', [ComicController::class,'edit'])->name('comics-edit');
+Route::delete("comic-destroy", [ComicController::class, 'destroy'])->name('comics-destroy');
+
+
 
 Route::get('characters', [PageController::class,'characters'])->name('characters');
 
@@ -42,4 +52,3 @@ Route::get('shop', [PageController::class,'shop'])->name('shop');
 
 
 
-Route::resource('comics', ComicController::class);
