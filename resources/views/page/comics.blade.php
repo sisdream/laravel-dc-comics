@@ -10,14 +10,14 @@
                     <img src="{{$comic['thumb']}}" alt="fumetto">
                 </div>
                 <h3 class="mt-2 text-uppercase">{{$comic['title']}}</h3>
-                <a href="{{ route('comic-detail', $comic['id'])}}">Dettaglio</a>
+                <a href="{{ route('comics.show', $comic['id'])}}">Dettaglio</a>
             </div>
         @endforeach
     </div>
     <div class="d-flex justify-content-center my-3">
         <button class="btn btn-primary rounded-0 custom-btn">LOAD MORE</button>
         <div class="icon mx-3">
-        <a href="{{ route('comics-create')}}"><i class="fa-solid fa-pen text-light"></i></a>
+        <a href="{{ route('comics.create')}}"><i class="fa-solid fa-pen text-light"></i></a>
         </div>
     </div>
 </main>

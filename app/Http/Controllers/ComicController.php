@@ -42,7 +42,7 @@ class ComicController extends Controller
         $comic->fill($data);
         $comic->save();
 
-        return view("page.comics-detail", compact("comic"));
+        return view("page.comics-create", compact("comic"));
     }
 
     /**

@@ -16,7 +16,6 @@ class PageController extends Controller
 
     public function comicDetail() {
         $comics = config('comics');
-        $comic = $comics[0];
         return view('page.comic-detail', compact('comic'));
     }
 
