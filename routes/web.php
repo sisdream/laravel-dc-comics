@@ -23,12 +23,6 @@ Route::get("", function () {
 Route::resource("comics", ComicController::class);
 
 Route::get('/', [ComicController::class,'index'])->name('home');
-Route::get('comics-create', [ComicController::class, 'create'])->name('comics-create');
-// Route::get('comics-detail/{id}', [ComicController::class,'show'])->name('comics-detail');
-Route::get('comics-create', [ComicController::class,'store'])->name('comic-detail');
-// Route::patch("comics", [ComicController::class, 'update'])->name('comics-update');
-Route::get('comics-edit/edit', [ComicController::class,'edit'])->name('comics-edit');
-Route::delete("comics-destroy", [ComicController::class, 'destroy'])->name('comics-destroy');
 
 
 
