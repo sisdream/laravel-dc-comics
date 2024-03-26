@@ -26,7 +26,7 @@ class ComicController extends Controller
      */
     public function create()
     {
-        //
+        return view('page.comic-crate');
     }
 
     /**
@@ -37,7 +37,11 @@ class ComicController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $data = $request->all();
+        $comic = new Comic();
+        $comic->fill($data);
+        $comic->save();
+        return redirect()->route('page.comic-detail', $comic);
     }
 
     /**
@@ -60,7 +64,7 @@ class ComicController extends Controller
      */
     public function edit(Comic $comic)
     {
-        //
+       //
     }
 
     /**
@@ -72,7 +76,7 @@ class ComicController extends Controller
      */
     public function update(Request $request, Comic $comic)
     {
-        //
+       //
     }
 
     /**
@@ -83,6 +87,6 @@ class ComicController extends Controller
      */
     public function destroy(Comic $comic)
     {
-        //
+       //
     }
 }

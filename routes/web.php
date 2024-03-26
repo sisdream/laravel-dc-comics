@@ -18,6 +18,8 @@ use App\Http\Controllers\PageController;
 
 Route::get('/', [ComicController::class,'index'])->name('home');
 
+Route::get('comics-create', [ComicController::class, 'crate'])->name('comics-create');
+
 Route::get('comic-detail/{id}', [ComicController::class,'show'])->name('comic-detail');
 
 Route::get('characters', [PageController::class,'characters'])->name('characters');
@@ -37,3 +39,7 @@ Route::get('fans', [PageController::class,'fans'])->name('fans');
 Route::get('news', [PageController::class,'news'])->name('news');
 
 Route::get('shop', [PageController::class,'shop'])->name('shop');
+
+
+
+Route::resource('comics', ComicController::class);
