@@ -35,7 +35,7 @@
                     <input class="form-control" type="text" id="type" name="type">
                 </div>
                 <div class="col-3 my-5">
-                    <button class="btn btn-success">Invia</button>
+                    <button type="submit" class="btn btn-success">Invia</button>
                 </div>
             </form>
        
