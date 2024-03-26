@@ -16,7 +16,7 @@ class ComicSeeder extends Seeder
      */
     public function run()
     {
-        $comics = require(config_path('comics.php'));
+        $comics = config('comics');
         foreach ($comics as $comicData) {
             $new_comic = new Comic();
             $new_comic->title = $comicData['title'];
