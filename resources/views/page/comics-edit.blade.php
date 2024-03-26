@@ -4,7 +4,7 @@
     <section>
         <div class="container">
             <h1 class="text-light text-center">Modifica fumetto</h1>
-            <form action="{{ route('comics-update', $comic)}}" method="POST">
+            <form action="{{ route('comics.update', $comic)}}" method="POST">
                 @csrf 
                 <div class="col-6">
                     <label for="title" class="form-label text-light">Title</label>
